@@ -1,0 +1,10 @@
+<div>
+  <form [formGroup]="parentFormGroup">
+    <label>Parent Input: </label>
+    <input formControlName="parentInput" />
+    <app-child-one
+      (formReady)="addChildForm('childOne', $event)"
+      (removeForm)="removeChildForm('childOne')"
+    ></app-child-one>
+  </form>
+</div>
